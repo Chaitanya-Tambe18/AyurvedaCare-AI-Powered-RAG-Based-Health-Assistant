@@ -1,0 +1,31 @@
+cd d:\AyurvedaCare
+d:\AyurvedaCare\venv\Scripts\Activate.ps1
+cd backend
+python app.py
+
+add new documents into vector store :--> python backend/database/ingest.py
+
+ollama pull nomic-embed-text
+ollama pull llama3
+
+🌍 MULTILINGUAL IMPLEMENTATION COMPLETE:
+✅ English: "I have fever" → English response
+✅ Hindi: "मुझे बुखार है" → Hindi response  
+✅ Marathi: "मला ताप आला आहे" → Marathi response
+
+🎯 Language Preference Detection:
+✅ "kya hum hindi mei baat kre??" → Hindi greeting
+✅ "marathi madhe bolu ka" → Marathi greeting
+✅ "can we speak in hindi" → Hindi response
+
+🧪 Test commands:
+python backend/test_multilingual.py           # Basic language tests
+python backend/test_multilingual_complete.py  # Complete test suite
+
+🔧 Features:
+- Auto language detection (EN/HI/MR)
+- Language preference requests
+- ChatGPT-quality responses
+- Unicode/UTF-8 support
+- Medical safety disclaimers
+- Structured diet plans
